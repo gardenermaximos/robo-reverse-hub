@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "project": { "id": "smoke", "name": "Smoke test disc", "created_at": "2026-11-19T00:00:00Z" },
+  "units": "mm",
+  "coordinate_system": { "origin": "robot_center", "x": "right", "y": "forward", "z": "up", "angle": "ccw_deg_from_+x" },
+  "constraints": { "max_enclosing_diameter_mm": 220.0 },
+  "options": { "stop_on_error": true, "group_timeline": true, "dry_run": false },
+  "commands": [
+    { "id": "c001", "op": "create_sketch", "label": "Create Sketch (XY @ z=0)",
+      "args": { "sketch_id": "sk_l0_outline", "plane": { "base": "XY", "offset_mm": 0.0 }, "name": "L0 outline" } },
+    { "id": "c002", "op": "draw_circle", "label": "Circle (0,0, D=215mm)",
+      "args": { "sketch_id": "sk_l0_outline", "center": [0, 0], "diameter_mm": 215.0 } },
+    { "id": "c003", "op": "extrude", "label": "Extrude (3mm) -> body L0_bottom_plate",
+      "args": { "sketch_id": "sk_l0_outline", "operation": "new_body", "distance_mm": 3.0,
+                "direction": "positive", "body_name": "L0_bottom_plate" } },
+    { "id": "c004", "op": "create_sketch", "label": "Create Sketch (XY @ z=0) holes",
+      "args": { "sketch_id": "sk_l0_holes", "plane": { "base": "XY", "offset_mm": 0.0 }, "name": "L0 holes" } },
+    { "id": "c005", "op": "draw_circle", "label": "Circle (32,-41.5, D=3.2mm)",
+      "args": { "sketch_id": "sk_l0_holes", "center": [32, -41.5], "diameter_mm": 3.2 } },
+    { "id": "c006", "op": "draw_circle", "label": "Circle (-32,-41.5, D=3.2mm)",
+      "args": { "sketch_id": "sk_l0_holes", "center": [-32, -41.5], "diameter_mm": 3.2 } },
+    { "id": "c007", "op": "draw_circle", "label": "Circle (32,41.5, D=3.2mm)",
+      "args": { "sketch_id": "sk_l0_holes", "center": [32, 41.5], "diameter_mm": 3.2 } },
+    { "id": "c008", "op": "draw_circle", "label": "Circle (-32,41.5, D=3.2mm)",
+      "args": { "sketch_id": "sk_l0_holes", "center": [-32, 41.5], "diameter_mm": 3.2 } },
+    { "id": "c009", "op": "extrude", "label": "Cut (3mm) M3 holes in L0_bottom_plate",
+      "args": { "sketch_id": "sk_l0_holes", "operation": "cut", "distance_mm": 3.0,
+                "direction": "positive", "target_body": "L0_bottom_plate" } }
+  ]
+}

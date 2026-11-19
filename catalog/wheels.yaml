@@ -1,0 +1,13 @@
+# wheels.yaml — Omnidirectional wheel catalog
+# Fill in with YOUR measured values (calipers).
+# Set verified: true after measuring.
+
+wheels:
+  # Example entry — replace with real values:
+  # omni_48:
+  #   verified: false
+  #   diameter_mm: 48.0   # outer diameter
+  #   width_mm: 18.0      # total wheel width
+  #   hub_diameter_mm: 10.0
+  #   mounting_hole_pitch_mm: null  # distance between fixing holes
+  #   notes: "Pololu 48mm omni wheel"

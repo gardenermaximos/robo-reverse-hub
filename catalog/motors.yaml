@@ -1,0 +1,14 @@
+# motors.yaml — Motor catalog
+# Fill in with YOUR measured values (calipers).
+# Set verified: true after measuring.
+
+motors:
+  # Example entry — replace with real values:
+  # pololu_micro:
+  #   verified: false
+  #   body_length_mm: 30.0
+  #   body_width_mm: 12.0
+  #   shaft_diameter_mm: 3.0
+  #   mounting_hole_spacing_mm: 16.0  # center-to-center
+  #   mounting_hole_diameter_mm: 3.0
+  #   notes: "Pololu micro metal gearmotor"

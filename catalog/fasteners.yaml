@@ -1,0 +1,38 @@
+# fasteners.yaml — Standard fastener dimensions
+# Values: ISO 273 fine series (clearance) and DIN 912 (cap head)
+# IMPORTANT: verify against your actual hardware batch before use.
+# Set verified: true after measuring with calipers.
+
+fasteners:
+  M2:
+    verified: false
+    clearance_mm: 2.2    # through-hole (passagem)
+    tap_mm: 1.6          # threaded-hole (rosca)
+    cap_head:
+      diameter_mm: 3.8
+      height_mm: 2.0
+    hex_nut:
+      across_flats_mm: 4.0
+      thickness_mm: 1.6
+
+  M2.5:
+    verified: false
+    clearance_mm: 2.7
+    tap_mm: 2.05
+    cap_head:
+      diameter_mm: 4.5
+      height_mm: 2.5
+    hex_nut:
+      across_flats_mm: 5.0
+      thickness_mm: 2.0
+
+  M3:
+    verified: false
+    clearance_mm: 3.2
+    tap_mm: 2.5
+    cap_head:
+      diameter_mm: 5.5
+      height_mm: 3.0
+    hex_nut:
+      across_flats_mm: 5.5
+      thickness_mm: 2.4
