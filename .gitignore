@@ -221,3 +221,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.next/
+
+# Ambiente e Chaves de API
+.env
+.env.local
+
+# CAD / EDA Temporários
+*.bak
+*.lck
+*~
